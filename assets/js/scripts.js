@@ -89,10 +89,10 @@ async function renderMovies() {
                 movie.properties.release_date
               }</p>
               <p><strong>Plot: </strong>${movie.properties.opening_crawl}</p>
-              <p class="fav-film"><strong>Vehicle: </strong><span class="film">${movie.properties.vehicles.map(
-                (vehicle) =>
-                  `<a href="${vehicle}" target="_blank">${favouriteVehicle(
-                    vehicle
+              <p class="fav-char"><strong>Characters: </strong><span class="film">${movie.properties.characters.map(
+                (character) =>
+                  `<a href="${character}" target="_blank">${favouriteCharacters(
+                    character
                   )}</a>`
               )}</span></p>
           </article>        
@@ -110,7 +110,7 @@ async function renderMovies() {
 
 renderMovies();
 
-async function favouriteVehicle(params) {
+async function favouriteCharacters(params) {
   let url = await fetch(params);
   let response = await url.json();
   console.log(response.result.properties.name); // shows desired output in the console but not in html page.
