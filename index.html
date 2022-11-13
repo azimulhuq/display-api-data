@@ -5,29 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Display API Data</title>
+
+    <!-- ICONSCOUT CDN -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css"
+    />
+
+    <!-- GOOGLE FONT -->
     <link
       href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&family=Oswald&family=Raleway&family=Roboto&display=swap"
       rel="stylesheet"
     />
+
+    <!-- STYLES -->
     <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <!-- SCRIPTS -->
     <script src="assets/js/scripts.js" defer></script>
   </head>
   <body>
-    <header>
+    <header class="header">
       <h1><a href="index.html">Star Wars</a></h1>
       <nav>
         <ul>
-          <li class="nav-people"><a href="#people">People</a></li>
-          <li class="nav-film"><a href="#film">Films</a></li>
-          <li class="nav-vehicle"><a href="#vehicle">Vehicles</a></li>
+          <li class="nav-home"><a href="index.html">Home</a></li>
+          <li class="nav-people">
+            <a href="templates/peoples.html">Peoples</a>
+          </li>
+          <li class="nav-film"><a href="templates/films.html">Films</a></li>
+          <li class="nav-vehicle">
+            <a href="templates/vehicles.html">Vehicles</a>
+          </li>
         </ul>
+        <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
+        <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
       </nav>
     </header>
     <main class="container">
-      <section id="people"></section>
-      <section id="film"></section>
-      <section id="vehicle"></section>
+      <section id="hero">
+        <img
+          class="hero__immage"
+          src="assets/images/star-wars.jpg"
+          alt="Star Destroyer"
+        />
+        <article class="hero__content">
+          <h3>Skill test for Advanced Classes</h3>
+          <p>
+            In order to prove myself I have worked here on 3 modules of Star
+            Wars API. They are People, Films and Vehicles.
+          </p>
+          <a href="#render-people" class="btn btn-primary">Get Started</a>
+        </article>
+      </section>
+      <section id="render-people" class="home-section"></section>
+      <section id="render-film" class="home-section"></section>
+      <section id="render-vehicle" class="home-section"></section>
     </main>
-    <footer>&copy;2022 || <a href="http://azimulhuq.me">Azimul Huq</a></footer>
+    <footer class="footer">
+      &copy;2022 || <a href="http://azimulhuq.me">Azimul Huq</a>
+    </footer>
   </body>
 </html>

@@ -72,30 +72,27 @@ img {
     color: var(--color-black);
     padding: 1rem 2rem;
     border: 1px solid transparent;
-    font-size: 1.2rem;
-    font-weight: 600;
-    letter-spacing: 1px;
+    font-weight: 500;
     transition: var(--transition);
 }
 
 .btn:hover {
     background: transparent;
-    color: var(--color-secondary);
-    background: var(--color-white);
+    color: var(--color-white);
+    border-color: var(--color-white);
 }
 
 .btn-primary {
     background: var(--color-secondary);
     color: var(--color-white);
-    border-radius: .3rem;
 }
 
 /* ################# Header ################# */
 
 header {
-    padding: 2rem 8rem;
+    padding: 2rem 1rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     font-family: var(--font-family-roboto);
     background-color: transparent;   
@@ -109,7 +106,7 @@ header {
 /* Change navbar style on scroll using javascript */
 .window-scroll {
     background: var(--color-bg2);
-    box-shadow: 0 1rem 2rem rgba(0, 30, 48, 0.55);
+    box-shadow: 0 1rem 2rem rgba(0, 30, 48, .55);
 }
 
 header h1 a {
@@ -164,7 +161,7 @@ section {
     align-items: baseline;
     align-content: space-around;    
     margin: 1rem 0;
-    padding: 4rem 8rem;
+    padding: 15rem 8rem;
     min-height: calc(480px + 40vh);
     line-height: 1.2;
 }
@@ -217,7 +214,7 @@ article p {
 }
 
 article p strong {
-    color: var(--color-secondary-dark);
+    color: var(--color-primary);
 }
 
 .view-all {
@@ -241,44 +238,10 @@ article p strong {
     border-color: var(--color-primary);   
 }
 
-/* ################# Hero Section ################# */
+/* ################# Peoples Page ################# */
 
-#hero {
-    max-height: 40rem;
-    padding: 0;
-    position: relative;
-    /* display: grid;  
-    grid-template-columns: 2fr 1fr; 
-    align-items: center; 
-    gap: 5rem;
-    height: 100%; */
-}
-
-#hero img {
-    vertical-align: top;
-}
-
-.hero__content {
-    display: inline-block;
-    width: 22%;
-    position: absolute;
-    top: 27rem;
-    right: 9rem;
-    color: var(--color-light);
-}
-
-.hero__content h3 {
-    font-size: 2rem;    
-}
-
-.hero__content p {
-    margin: 1rem 0 2.4rem;
-}
-
-/* ################# Peoples Section ################# */
-#render-people {
-    background-color: var(--color-bg1);
-    margin-top: 11rem;
+#people {
+    background-color: var(--color-bg);   
 }
 
 #render-people::after {
@@ -287,7 +250,7 @@ article p strong {
     content: "";
 }
 
-.h-people {
+.people {
     width: 21%;
     height: 32.5rem;
     margin: 1.5rem 0;
@@ -299,7 +262,7 @@ article p strong {
     box-shadow: inset 0 0 0 1.1rem var(--color-bg3); /* <-- 1.1rem spread radius */
 }
 
-.h-people h3 {    
+.people h3 {    
     text-align: center; 
     margin: 0;
     padding: 1rem 0;
@@ -309,36 +272,36 @@ article p strong {
     box-shadow: inset 0 0 0 1.1rem var(--color-bg3); /* <-- 1.1rem spread radius */
 }
 
-.h-people p {
+.people p {
     margin-inline-start: .5rem;
 }
 
 
-/* ################# Films Section ################# */
+/* ################# Films Page ################# */
 
-.h-movie {
-    width: 21%;
-    height: 43.5rem;
+.movie {
+    width: 30%;
+    height: 109.5rem;
     margin: 1.5rem 0;
     padding: 2rem;
-    border: 2px solid var(--color-light);
+    border: 2px solid var(--color-bg3);
     border-radius: .5rem;    
     color: var(--color-secondary);
     background-clip: content-box; /* <---- */
-    box-shadow: inset 0 0 0 1.1rem var(--color-light); /* <-- 1.1rem spread radius */
+    box-shadow: inset 0 0 0 1.1rem var(--color-bg3); /* <-- 1.1rem spread radius */
 }
 
-.h-movie h3 {      
+.movie h3 {      
     text-align: center; 
     margin: 0;
     padding: 1rem 0;
-    background-color: var(--color-light); 
-    color: var(--color-secondary);
+    background-color: var(--color-bg3); 
+    color: var(--color-white);
     background-clip: content-box; /* <---- */
-    box-shadow: inset 0 0 0 1.1rem var(--color-light); /* <-- 1.1rem spread radius */
+    box-shadow: inset 0 0 0 1.1rem var(--color-bg3); /* <-- 1.1rem spread radius */
 }
 
-.h-movie p {
+.movie p {
     margin-inline-start: .5rem;
 }
 
@@ -348,7 +311,7 @@ article p strong {
     background-color: var(--color-bg1);
 }
 
-.h-vehicle {
+.vehicle {
     width: 21%;
     height: 32.5rem;
     margin: 1.5rem 0;
@@ -360,7 +323,7 @@ article p strong {
     box-shadow: inset 0 0 0 1.1rem var(--color-bg3); /* <-- 1.1rem spread radius */
 }
 
-.h-vehicle h3 {   
+.vehicle h3 {   
     text-align: center; 
     margin: 0;
     padding: 1rem 0;
@@ -370,16 +333,21 @@ article p strong {
     box-shadow: inset 0 0 0 1.1rem var(--color-bg3); /* <-- 1.1rem spread radius */
 }
 
-.h-vehicle p {
+.vehicle p {
     margin-inline-start: .5rem;
 }
+
+/* ################# Vehicles views ################# */
+
+
 
 /* ################# Footer ################# */
 
 footer {
     text-align: center;
     padding: 1rem 3rem;
-    font-family: var(--font-family-roboto);   
+    font-family: var(--font-family-roboto); 
+    background: var(--color-bg2);  
     color: var(--color-light);
 }
 
@@ -390,179 +358,4 @@ footer a {
 
 footer a:hover {
     font-size: 1.2rem;
-}
-
-/* ################# MEDIA QUERIES ################# */
-@media screen and (max-width: 2160px) {
-    .h-people, .view-all, .h-movie, .h-vehicle {
-        width: 28%;        
-    }
-
-    .hero__content {
-        width: 32%;
-        top: 32rem;
-        right: 3rem;
-    }
-}
-
-@media screen and (max-width: 1600px) {
-    .h-people, .view-all, .h-movie, .h-vehicle {
-        width: 47%;        
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .hero__content {        
-        width: 36%;        
-        top: 20rem;
-        right: 3rem;        
-    }
-    
-    .hero__content h3 {
-        font-size: 1.3rem;    
-    }
-
-    .hero__content p, .btn {
-        font-size: 1rem;    
-    }
-
-    section {
-        min-height: 70vh;
-        margin: 0;
-        padding: 2rem 5rem;
-    }
-
-    header {
-        padding: 1.8rem 5rem;
-    }
-
-    header h1 a {
-        font-size: 1.8rem;
-    }
-
-    nav ul li a {
-        font-size: 1rem;
-    }
-    
-    #render-people {    
-        margin-top: 0;
-    }
-
-    .h-people, .view-all, .h-movie, .h-vehicle {
-        width: 47%;        
-    }
-
-    section h2 {
-        margin: 3rem auto 4rem auto;        
-        font-size: 1.5rem;
-    }
-
-    article h3 {
-        font-size: 1.3rem;
-    }
-
-    article p {
-        line-height: 1.5rem;
-        font-size: 1rem;
-    }
-
-    .view-all a {
-        font-size: 1.3rem;        
-    }
-
-}
-
-@media screen and (max-width: 768px) {
-    /* body {
-        background: red;
-    } */
-
-    .hero__content {        
-        width: 36%;        
-        top: 11rem;
-        right: 3rem;        
-    }
-    
-    .hero__content h3 {
-        font-size: 1.1rem;    
-    }
-
-    .hero__content p, .btn {
-        font-size: .9rem;    
-    }
-
-    section {
-        min-height: 70vh;
-        margin: 0;
-        padding: 1.5rem 3rem;
-    }
-
-    header {
-        padding: 1.5rem 3rem;
-    }
-
-    header h1 a {
-        font-size: 1.5rem;
-    }
-
-    nav ul li a {
-        font-size: 1rem;
-    }
-    
-    #render-people {    
-        margin-top: 0;
-    }
-
-    .h-people, .view-all, .h-movie, .h-vehicle {
-        width: 47%;        
-    }
-
-    section h2 {
-        margin: 3rem auto 4rem auto;        
-        font-size: 1.3rem;
-    }
-
-    article h3 {
-        font-size: 1.1rem;
-    }
-
-    article p {
-        line-height: 1.5rem;
-        font-size: .9rem;
-    }
-
-    .view-all a {
-        font-size: 1.1rem;        
-    }
-
-}
-
-@media screen and (max-width: 640px) {
-    body {
-        background: red;
-    }
-
-    .hero__content {        
-        width: 34%;        
-        top: 5rem;
-        right: 3rem;        
-    }
-    
-    .h-people, .view-all, .h-movie, .h-vehicle {
-        width: 96%;        
-    }
-}
-
-@media screen and (max-width: 420px) {
-    body {
-        background: red;
-    }
-
-    .hero__content {        
-        display: none;        
-    }
-    
-    .h-people, .view-all, .h-movie, .h-vehicle {
-        width: 96%;        
-    }
 }
