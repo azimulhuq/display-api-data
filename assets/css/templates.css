@@ -339,7 +339,32 @@ article p strong {
 
 /* ################# Vehicles views ################# */
 
+#vehicle-view, #film-view, #people-view {
+    padding: 13rem 8rem;
+}
 
+#vehicle-view h2:before, #film-view h2:before, #people-view h2:before {
+    left: 31.3vw;
+    margin: 1.4rem 0;
+}
+
+#vehicle-view h2:after, #film-view h2:after, #people-view h2:after {
+    margin: 1.4rem 3.5vw;
+}
+
+#vehicle-view .vehicle, #film-view .movie, #people-view .people {
+    flex-basis: 60%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+#film-view .movie {
+    height: 78.5rem;
+}
+
+#vehicle-view .vehicle p, #film-view .movie p, #people-view .people p {
+    padding: 1rem;
+}
 
 /* ################# Footer ################# */
 
