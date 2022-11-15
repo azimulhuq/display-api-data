@@ -172,14 +172,25 @@ function moduleName(moduleNames) {
 }
 
 async function showData(link) {
+  let message = "";
+
+  if (link.split("/").at(-3) === "people") {
+    message =
+      "There was a problem with fetching the single peoples content in view page.";
+  } else if (link.split("/").at(-3) === "films") {
+    message =
+      "There was a problem with fetching the single films content in view page.";
+  } else {
+    message =
+      "There was a problem with fetching the single vehicles content in view page.";
+  }
+
   try {
     const response = await fetch(link);
     const data = await response.json();
     getDetailsOnModuleLinkClick(data);
   } catch (error) {
-    console.log(
-      "There was a problem with fetching the vehicles content in peoples link click."
-    );
+    console.log(message);
   }
 }
 
