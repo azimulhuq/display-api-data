@@ -140,21 +140,23 @@ function getModulesOnHome(modules, limit) {
 function getElements(arrayData) {
   let holder = "";
   let href = "";
+  let apiModule = "";
 
   if (moduleName(arrayData) === "films") {
     href = "../../views/film-view.html";
+    apiModule = "films";
   } else if (moduleName(arrayData) === "vehicles") {
     href = "../../views/vehicle-view.html";
+    apiModule = "vehicles";
   } else {
     href = "../../views/people-view.html";
+    apiModule = "people";
   }
 
   for (let index = 0; index < arrayData.length; index++) {
     const id = arrayData[index].split("/").at(-2);
 
-    let elemHolder = `<a href="${href}" onclick="${showData(
-      arrayData[index]
-    )}" data-id="${id}">${arrayData[index]}</a>`;
+    let elemHolder = `<a href="" data-id="${id}">${arrayData[index]}</a>`;
 
     holder += elemHolder + ", ";
   }
@@ -172,6 +174,7 @@ function moduleName(moduleNames) {
 }
 
 async function showData(link) {
+  console.log(link);
   let message = "";
 
   if (link.split("/").at(-3) === "people") {
@@ -261,7 +264,16 @@ function getDetailsOnModuleLinkClick(module) {
    `;
 }
 
-renderModulesOnHome(homeModules[0], 3);
+renderModulesOnHome(homeModules[0], 3).then(() => {
+  const elm = document.querySelectorAll(".home-section article p span a");
+  elm.forEach((selector) => {
+    selector.addEventListener("click", (event) => {
+      event.target.setAttribute("href", "../../views/film-view.html");
+      showData(event.target.innerHTML);
+      // console.log(event);
+    });
+  });
+});
 renderModulesOnHome(homeModules[1], 5);
 renderModulesOnHome(homeModules[2], 1);
 
